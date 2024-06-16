@@ -29,6 +29,9 @@ function App() {
   };
 
   const handledelete = (index) => {
+    if(checked.includes(index)){
+      setChecked(checked.filter((i)=>(i != index)));
+    }
     setTasks(tasks.filter((_, i) => i !== index));
   };
 
